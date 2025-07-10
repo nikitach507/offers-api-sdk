@@ -10,7 +10,7 @@ There are two main types of plugins:
 
 ## Example of Using Plugins
 
-You can register plugins when you initialize the `OffersClient`, or you can add them later using the `register_plugin()` method.
+You can register plugins when you initialize the `OffersClient`, or you can add them later using the `register_plugins()` method.
 
 ### Registering Plugins at Initialization
 
@@ -30,8 +30,8 @@ client = OffersClient(
     refresh_token="your-refresh-token"
 )
 
-client.register_plugin(MyCustomRequestPlugin())
-client.register_plugin(MyCustomResponsePlugin())
+client.register_plugins(MyCustomRequestPlugin())
+client.register_plugins(MyCustomResponsePlugin())
 ```
 
 ## Creating Your Own Plugins
@@ -69,11 +69,11 @@ class MyCustomResponsePlugin(ResponsePlugin):
 
 ## Registering Plugins
 
-Once you've created your custom plugins, you can register them with the `OffersClient` instance using `register_plugin()`.
+Once you've created your custom plugins, you can register them with the `OffersClient` instance using `register_plugins()`.
 
 ```python
-client.register_plugin(MyCustomRequestPlugin())
-client.register_plugin(MyCustomResponsePlugin())
+client.register_plugins(MyCustomRequestPlugin())
+client.register_plugins(MyCustomResponsePlugin())
 ```
 
 You can also pass them at initialization as shown in the examples above.

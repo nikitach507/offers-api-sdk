@@ -126,11 +126,11 @@ See [API Reference](api_reference.md) for detailed usage.
 
 ## Plugins
 
-You can pass plugins at initialization or register them later using register_plugin().
+You can pass plugins at initialization or register them later using register_plugins().
 
 ```python
 client = OffersClient(..., plugins=[MyCustomPlugin])
-client.register_plugin(MyCustomPlugin())
+client.register_plugins(MyCustomPlugin())
 ```
 
 Plugins can:

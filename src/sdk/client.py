@@ -107,7 +107,7 @@ class OffersClient:
         self._response_plugins: list[ResponsePlugin] = []
 
         for plugin in plugins or []:
-            self.register_plugin(plugin)
+            self.register_plugins(plugin)
 
     async def __aenter__(self: T) -> T:
         return self
@@ -121,7 +121,7 @@ class OffersClient:
     def __repr__(self) -> str:
         return f"OffersClient(base_url={self._config.api_base_url}, backend={self._config.backend})"
 
-    def register_plugin(self, plugin: Plugin | list[Plugin]) -> None:
+    def register_plugins(self, plugin: Plugin | list[Plugin]) -> None:
         """
         Register one or more plugins for request and response processing.
 
