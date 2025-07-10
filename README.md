@@ -48,12 +48,11 @@ Clone this repository and install the package:
 ```bash
 git clone https://github.com/nikitach507/offers-api-sdk
 cd offers-api-sdk
-pip install .
 ```
 
 ## Quickstart Guide
 
-Start with the [Quickstart Guide](quickstart.md) to get a product up and running in minutes.
+Start with the [Quickstart Guide](docs/quickstart.md) to get a product up and running in minutes.
 
 ## License
 
